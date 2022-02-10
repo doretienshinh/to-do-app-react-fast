@@ -11,7 +11,9 @@ const TaskField = (props) => {
     }
     const removeTask = (id) =>{
         props.removeTask(id);
-        console.log(id);
+    }
+    const doneAll = () =>{
+        
     }
     return (
         <div className='root_task_list'>
