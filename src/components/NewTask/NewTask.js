@@ -5,7 +5,7 @@ const NewTask = (props) => {
 
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredDescription, setEnteredDescription] = useState('');
-    const [enteredPiority, setEnteredPiority] = useState(2);
+    const [enteredPiority, setEnteredPiority] = useState('2');
     // set default time
     const date = new Date();
     const futureDate = date.getDate();
