@@ -3,6 +3,7 @@ import './TaskItem.css';
 
 const TaskItem = (props) => {
 
+    const [checked, setChecked] = useState(props.items.done);
     const [displayDetail, setDisplayDetail] = useState(false);
 
     const [enteredTitle, setEnteredTitle] = useState(props.items.title);
@@ -44,12 +45,16 @@ const TaskItem = (props) => {
     const toggleDetail = () => {
         setDisplayDetail(!displayDetail);
     }
+    const changeDone = () =>{
+        setChecked(!checked);
+        props.changeDone(props.items.id);
+    }
     return (
         <div>
             <div className="card_taskItem">
                 <div className="task_title_taskItem">
                     <div className="checkbox">
-                        <input type="checkbox" id={`custom-checkbox-${props.items.id}`} name="" value="" />
+                        <input type="checkbox" id={`custom-checkbox-${props.items.id}`} onChange={changeDone} checked={checked}/>
                         <label htmlFor={`custom-checkbox-${props.items.id}`}><span>{props.items.title}</span></label>
                     </div>
                 </div>

@@ -26,13 +26,20 @@ function App() {
     });
     console.log(tasks);
   };
-
+  const changeDoneTask = (id) =>{
+    tasks.forEach(element => {
+      if(element.id === id){
+        element.done = !element.done;
+        localStorage.setItem('todoListData', JSON.stringify(tasks));
+      }
+    });
+  }
   return (
     <div className="App">
       <div className="container">
         <NewTask className="NewTask" onSaveTaskData={addNewTaskHandler}></NewTask>
         <div className="ListTask">
-        <TaskField items={tasks}></TaskField>
+        <TaskField items={tasks} changeDoneTask={changeDoneTask}></TaskField>
         </div>
       </div>
     </div>
