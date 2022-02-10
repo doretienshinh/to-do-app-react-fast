@@ -1,0 +1,96 @@
+.root {
+  width: 40%;
+  height: 100%;
+  /* padding: 30px 20px; */
+}
+.test{
+    padding: 30px 20px;
+}
+.Header {
+  margin-bottom: 20px;
+  font-size: 18px;
+  height: 80px;
+}
+.input-title {
+  margin-bottom: 10px;
+}
+.input-title input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: calc(100% - 1em);
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.description textarea {
+  width: 560px;
+  height: 125px;
+  font-size: 12px;
+}
+.date-piority {
+  display: flex;
+  justify-content: space-between;
+}
+.date {
+  width: 40%;
+}
+.date input {
+  width: 100%;
+  font-size: 12px;
+  height: 40px;
+  text-decoration: none;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 0px;
+}
+.piority {
+  width: 40%;
+}
+
+.piority select {
+  width: 100%;
+  height: 42px;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: left;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 0px;
+}
+
+.add-button {
+  margin-top: 70px;
+  width: 100%;
+}
+
+.add-button button {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  color: #ffffff;
+  font-family: Arimo;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  background: #5cb85c;
+  border: none;
+  border-radius: 5px;
+}
