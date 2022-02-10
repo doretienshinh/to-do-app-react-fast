@@ -27,13 +27,16 @@ const NewTask = (props) => {
         setEnteredPiority(event.target.value);
     }
     const submitHandler = (event) => {
+        let data =  JSON.parse(localStorage.getItem('todoListData'));
+        let countId = data == null ? 0 : data.length;
         event.preventDefault();
         const taskData = {
-            id: Math.random().toString(),
+            id: countId,
             title: enteredTitle,
             description: enteredDescription,
             piority: enteredPiority,
             date: enteredDate,
+            done: false,
         }
         props.onSaveTaskData(taskData);
         setEnteredTitle('');

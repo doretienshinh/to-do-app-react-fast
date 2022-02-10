@@ -1,0 +1,52 @@
+.root_taskFooter {
+  position: absolute;
+  bottom: 0;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+}
+.taskFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.button_taskFooter {
+  display: flex;
+  justify-content: center;
+}
+
+.detail_button_taskFooter {
+  padding: 10px 45px;
+  color: #ffffff;
+  font-family: Arimo;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  background: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.remove_button_taskFooter {
+  padding: 10px 45px;
+  color: #ffffff;
+  font-family: Arimo;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  background: #d9534f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

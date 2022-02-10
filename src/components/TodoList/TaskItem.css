@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-top: 16px;
 }
 
 .checkbox {
@@ -89,7 +89,6 @@
 .detail_button_taskItem {
   padding: 10px 45px;
   color: #ffffff;
-  font-family: Arimo;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -99,18 +98,25 @@
   border: none;
   border-radius: 5px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .remove_button_taskItem {
-    padding: 10px 45px;
+  padding: 10px 45px;
   color: #ffffff;
-  font-family: Arimo;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
   text-align: center;
-  background: #D9534F;
+  background: #d9534f;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.detail_taskItem {
+  border: 1px solid black;
+  border-top: 0px solid black;
+  padding: 20px;
 }

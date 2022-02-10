@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import NewTask from './components/NewTask/NewTask';
-import TaskList from './components/TodoList/TaskList';
+import TaskField from './components/TodoList/TaskField';
 
 // const TASK_DATA = [
 //   {
@@ -32,7 +32,7 @@ function App() {
       <div className="container">
         <NewTask className="NewTask" onSaveTaskData={addNewTaskHandler}></NewTask>
         <div className="ListTask">
-        <TaskList items={tasks}></TaskList>
+        <TaskField items={tasks}></TaskField>
         </div>
       </div>
     </div>
