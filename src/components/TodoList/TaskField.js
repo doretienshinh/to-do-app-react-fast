@@ -9,13 +9,16 @@ const TaskField = (props) => {
     const changeDone = (id) =>{
         props.changeDoneTask(id);
     }
-
+    const removeTask = (id) =>{
+        props.removeTask(id);
+        console.log(id);
+    }
     return (
         <div className='root_task_list'>
             <div className='padding_task_list'>
                 <div className='header_task_list'>To Do List</div>
                 <SearchTask></SearchTask>
-                <TaskList items={props.items} changeDone = {changeDone}></TaskList>
+                <TaskList items={props.items} changeDone = {changeDone} removeTask={removeTask}></TaskList>
             </div>
             <TaskFooter></TaskFooter>
         </div>

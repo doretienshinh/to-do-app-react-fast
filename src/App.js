@@ -34,12 +34,16 @@ function App() {
       }
     });
   }
+  const removeTask = (id) =>{
+    let tasksNew = tasks.filter(task => task.id !== id);
+    localStorage.setItem('todoListData', JSON.stringify(tasksNew));
+  }
   return (
     <div className="App">
       <div className="container">
         <NewTask className="NewTask" onSaveTaskData={addNewTaskHandler}></NewTask>
         <div className="ListTask">
-        <TaskField items={tasks} changeDoneTask={changeDoneTask}></TaskField>
+        <TaskField items={tasks} changeDoneTask={changeDoneTask} removeTask={removeTask}></TaskField>
         </div>
       </div>
     </div>

@@ -7,7 +7,9 @@ const TaskList = (props) => {
     const changeDone = (id) =>{
         props.changeDone(id);
     }
-
+    const removeTask = (id) =>{
+        props.removeTask(id);
+    }
     if (props.items == null) {
         return <div className="">Found no task.</div>
     }
@@ -19,6 +21,7 @@ const TaskList = (props) => {
                             key={task.id}
                             items={task}
                             changeDone = {changeDone}
+                            removeTask = {removeTask}
                         />
                     ))}
             </div>
