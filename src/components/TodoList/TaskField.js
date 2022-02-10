@@ -16,8 +16,10 @@ const TaskField = (props) => {
         console.log(value);
         setSearchFilter(value);
     }
-
-    const filterTask = props.items.filter(element => element.title.search(searchFilter) >= 0);
+    const filterTask = null;
+    if(props.items !== null){
+        const filterTask = props.items.filter(element => element.title.search(searchFilter) >= 0);
+    }
     return (
         <div className='root_task_list'>
             <div className='padding_task_list'>
