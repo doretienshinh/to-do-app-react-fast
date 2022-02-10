@@ -68,6 +68,8 @@
   font-weight: normal;
   cursor: pointer;
   vertical-align: sub;
+  font-size: 20px;
+  overflow: hidden;
 }
 .checkbox label span {
   position: absolute;

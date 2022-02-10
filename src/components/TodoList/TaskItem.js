@@ -25,24 +25,6 @@ const TaskItem = (props) => {
     const piorityChangeHandler = (event) => {
         setEnteredPiority(event.target.value);
     }
-    const submitHandler = (event) => {
-        let data = JSON.parse(localStorage.getItem('todoListData'));
-        let countId = data == null ? 0 : data.length;
-        event.preventDefault();
-        const taskData = {
-            id: countId,
-            title: enteredTitle,
-            description: enteredDescription,
-            piority: enteredPiority,
-            date: enteredDate,
-            done: false,
-        }
-        props.onSaveTaskData(taskData);
-        setEnteredTitle('');
-        setEnteredDescription('');
-        setEnteredDate(props.items.date);
-        setEnteredPiority(2);
-    }
     const toggleDetail = () => {
         setDisplayDetail(!displayDetail);
     }
@@ -53,6 +35,19 @@ const TaskItem = (props) => {
     const removeTask = () => {
         setRemoved(true);
         props.removeTask(props.items.id);
+    }
+    const submitHandlerUpdate = () => {
+        const TASK_DATA = JSON.parse(localStorage.getItem('todoListData'));
+        TASK_DATA.forEach(element => {
+            if(element.id === props.items.id){
+                element.title = enteredTitle;
+                element.description = enteredDescription;
+                element.piority = enteredPiority;
+                element.date = enteredDate;
+                element.done = element.done;
+            }
+        })
+        localStorage.setItem('todoListData', JSON.stringify(TASK_DATA));
     }
     return (
         <div>
@@ -77,7 +72,7 @@ const TaskItem = (props) => {
                 {
                     displayDetail &&
                     <div className='detail_taskItem'>
-                        <form onSubmit={submitHandler}>
+                        <form onSubmit={submitHandlerUpdate}>
                             <div>
                                 <div className='input_title_new_task'>
                                     <input type='text' placeholder='Add new task . . .' value={enteredTitle} onChange={titleChangeHandler} />
