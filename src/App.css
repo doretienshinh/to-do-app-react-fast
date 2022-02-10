@@ -22,5 +22,5 @@
 .ListTask{
   width: 60%;
   min-height: 100%;
-  background: #4a5cc2;
+  border-left: 1px solid black;
 }

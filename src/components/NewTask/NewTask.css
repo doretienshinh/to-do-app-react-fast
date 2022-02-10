@@ -1,20 +1,20 @@
-.root {
+.root_new_task {
   width: 40%;
   height: 100%;
   /* padding: 30px 20px; */
 }
-.test{
+.padding_new_task{
     padding: 30px 20px;
 }
-.Header {
+.Header_new_task {
   margin-bottom: 20px;
   font-size: 18px;
   height: 80px;
 }
-.input-title {
+.input_title_new_task {
   margin-bottom: 10px;
 }
-.input-title input {
+.input_title_new_task input {
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
@@ -22,7 +22,7 @@
   width: calc(100% - 1em);
 }
 
-.description {
+.description_new_task {
   margin-bottom: 10px;
 }
 
@@ -36,19 +36,19 @@ label {
   margin-bottom: 5px;
 }
 
-.description textarea {
+.description_new_task textarea {
   width: 560px;
   height: 125px;
   font-size: 12px;
 }
-.date-piority {
+.date_piority_new_task {
   display: flex;
   justify-content: space-between;
 }
-.date {
+.date_new_task {
   width: 40%;
 }
-.date input {
+.date_new_task input {
   width: 100%;
   font-size: 12px;
   height: 40px;
@@ -58,11 +58,11 @@ label {
   border: 1px solid #000000;
   border-radius: 0px;
 }
-.piority {
+.piority_new_task {
   width: 40%;
 }
 
-.piority select {
+.piority_new_task select {
   width: 100%;
   height: 42px;
   font-size: 12px;
@@ -74,12 +74,12 @@ label {
   border-radius: 0px;
 }
 
-.add-button {
+.add-button_new_task {
   margin-top: 70px;
   width: 100%;
 }
 
-.add-button button {
+.add-button_new_task button {
   cursor: pointer;
   height: 40px;
   width: 100%;

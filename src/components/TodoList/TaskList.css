@@ -1,0 +1,13 @@
+.root_task_list {
+  width: 100%;
+  height: 100%;
+  /* padding: 30px 20px; */
+}
+.padding_task_list {
+  padding: 30px 20px;
+}
+.header_task_list {
+  margin-bottom: 20px;
+  font-size: 18px;
+  height: 80px;
+}

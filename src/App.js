@@ -27,17 +27,12 @@ function App() {
     console.log(tasks);
   };
 
-  function test() {
-    console.log(tasks);
-    // console.log(localStorage.getItem('todoListData', JSON.stringify(tasks)));
-    // localStorage.setItem('todoListData', JSON.stringify(tasks));
-  }
   return (
     <div className="App">
       <div className="container">
         <NewTask className="NewTask" onSaveTaskData={addNewTaskHandler}></NewTask>
         <div className="ListTask">
-        <TaskList></TaskList>
+        <TaskList items={tasks}></TaskList>
         </div>
       </div>
     </div>
